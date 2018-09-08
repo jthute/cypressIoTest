@@ -43,9 +43,8 @@ Go to the terminal in Visual studio code
   $ npm install -g cypress --save-dev
 
 
---On Visual Studio Code > Terminal
+--On Visual Studio Code > On the Terminal enter 
 >  npm run cypress:open
 
---Opens a new Cypress window
-Run simpleseach.spec.js test
+--Opens a new Cypress window > Run simpleseach.spec.js test
 >    click on simplesearch.spec.js
