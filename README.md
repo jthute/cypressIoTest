@@ -21,8 +21,8 @@ Can use Visual studio code or webstorm to work with Cypress:
 
 Go to the terminal in Visual studio code 
 
-1)mkdir cypressTestDemo
-2)cd cypressTestDemo
+1)mkdir cypress_test_demo
+2)cd cypress_test_demo
 3) NPM Global Requirements
 
   $ npm init
