@@ -20,24 +20,32 @@ Writing end-to-end tests takes a lot of different tools to work together. With C
 Can use Visual studio code or webstorm to work with Cypress:
 
 Go to the terminal in Visual studio code 
+
 1)mkdir cypressTestDemo
 2)cd cypressTestDemo
 3) NPM Global Requirements
+
   $ npm init
      ( Press ^C at any time to quit. package name: (cypresstest) version: (1.0.0) description: Test cypress working entry point: (index.js) test command: git repository:)
+     
   $ npm install -g cpy-cli
+  
   $ npm install -g karma-cli
+  
   $ npm install -g appium
+  
   $ npm install -g webpack
+  
   $ npm install -g webpack-dev-server
+  
   $ npm install -g documentation
+  
   $ npm install -g cypress --save-dev
 
 
 --On Visual Studio Code > Terminal
-
-    npm run cypress:open
+>  npm run cypress:open
 
 --Opens a new Cypress window
 Run simpleseach.spec.js test
-    click on simplesearch.spec.js
+>    click on simplesearch.spec.js
