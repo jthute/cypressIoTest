@@ -1,0 +1,32 @@
+{
+  "name": "cypress_test_demo",
+  "version": "0.0.2",
+  "private": true,
+  "description": "Cypress Testing Project",
+  "main": "build/app.bundle.js",
+  "author": "JT",
+  "scripts": {
+    "documentation": "documentation build src/js/example/example_machine.js -f html -o docs --config .documentation.yml",
+    "documentation:all": "documentation build src/js/** -f html -o docs --config .documentation.yml --document-exported",
+    "dev": "webpack-dev-server --config webpack.dev.config.js --progress --colors --watch --inline -d",
+    "build": "NODE_ENV=build webpack --config webpack.dev.config.js --progress --colors -d --output-path 'build'",
+    "dist": "NODE_ENV=production webpack --config webpack.prod.config.js --progress --colors --output-path 'dist'",
+    "test": "karma start karma.dev.conf.js --single-run",
+    "test:head": "karma start karma.head.conf.js",
+    "test:watch": "karma start karma.dev.conf.js",
+    "test:ci": "karma start karma.ci.conf.js --single-run",
+    "test:android": "karma start karma.appium.android.conf.js --single-run",
+    "test:android:watch": "karma start karma.appium.android.conf.js",
+    "test:ios": "karma start karma.appium.ios.conf.js --single-run",
+    "test:ios:watch": "karma start karma.appium.ios.conf.js",
+    "test:coverage": "npm run test:coverage:flow && npm run test:coverage:lcov",
+    "test:coverage:lcov": "karma start karma.coverage.conf.js --single-run",
+    "test:coverage:lcov:watch": "karma start karma.coverage.conf.js",
+    "test:coverage:flow": "./node_modules/flow-coverage-report/bin/flow-coverage-report.js -i 'src/js/**/*.js' -t text -f ./node_modules/flow-bin/vendor/flow --threshold 20",
+    "test:coverage:flow:report": "./node_modules/flow-coverage-report/bin/flow-coverage-report.js -i 'src/js/**/*.js' -t html -f ./node_modules/flow-bin/vendor/flow -o coverage/flow --threshold 20",
+    "cypress:open": "cypress open"
+  },
+  "dependencies": {
+    "cypress-example-kitchensink": "^1.0.2"
+  }
+}
